@@ -2,7 +2,7 @@ let coorArr = [];
 let adrArr = [];
 
 async function getData() {
-    const api_url = "https://opendata.brussels.be/api/records/1.0/search/?dataset=laadpalen-voor-elektrische-wagens&q=";
+    const api_url = "https://opendata.brussels.be/api/records/1.0/search/?dataset=laadpalen-voor-elektrische-wagens&q=&rows=10000";
     const response = await fetch(api_url);
     const data = await response.json();
     for (let i = 0; i < data.records.length; i++) {
